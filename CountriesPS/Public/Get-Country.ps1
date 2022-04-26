@@ -431,54 +431,54 @@
 			if ($Name)
 			{
 				Write-Verbose "Name = $Name"
-				$URI = "https://restcountries.eu/rest/v1/name/$Name"
+				$URI = "https://restcountries.com/v3.1/name/$Name"
 			}
 			elseif ($CountryCode)
 			{
 				Write-Verbose "CountryCode = $CountryCode"
 				if ($CountryCode.count -gt 1)
 				{
-					$URI = "https://restcountries.eu/rest/v1/alpha/?codes=$($CountryCode -join "%3B")"
+					$URI = "https://restcountries.com/v3.1/alpha/?codes=$($CountryCode -join "%3B")"
 				}
 				else
 				{
-					$URI = "https://restcountries.eu/rest/v1/alpha/$CountryCode"
+					$URI = "https://restcountries.com/v3.1/alpha/$CountryCode"
 				}
 			}
 			elseif ($CallingCode)
 			{
 				Write-Verbose "CallingCode = $CallingCode"
-				$URI = "https://restcountries.eu/rest/v1/callingcode/$CallingCode"
+				$URI = "https://restcountries.com/v2/callingcode/$CallingCode"
 			}
 			elseif ($Capital)
 			{
 				Write-Verbose "Capital = $Capital"
-				$URI = "https://restcountries.eu/rest/v1/capital/$Capital"
+				$URI = "https://restcountries.com/v3.1/capital/$Capital"
 			}
 			elseif ($Currency)
 			{
 				Write-Verbose "Currency = $Currency"
-				$URI = "https://restcountries.eu/rest/v1/currency/$Currency"
+				$URI = "https://restcountries.com/v3.1/currency/$Currency"
 			}
 			elseif ($Language)
 			{
 				Write-Verbose "Language = $Language"
-				$Uri = "https://restcountries.eu/rest/v1/lang/$Language"
+				$Uri = "https://restcountries.com/v3.1/lang/$Language"
 			}
 			elseif ($Region)
 			{
 				Write-Verbose "Region = $Region"
-				$Uri = "https://restcountries.eu/rest/v1/region/$Region"
+				$Uri = "https://restcountries.com/v3.1/region/$Region"
 			}
 			elseif ($SubRegion)
 			{
 				Write-Verbose "SubRegion = $SubRegion"
-				$Uri = "https://restcountries.eu/rest/v1/subregion/$SubRegion"
+				$Uri = "https://restcountries.com/v3.1/subregion/$SubRegion"
 			}
 			else
 			{
 				Write-Verbose "No parameter specified. Retrieving all countries"
-				$URI = "https://restcountries.eu/rest/v1/all"
+				$URI = "https://restcountries.com/v3.1/all"
 			}
 			
 			
